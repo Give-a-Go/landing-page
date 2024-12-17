@@ -1,0 +1,19 @@
+.gridbodi{
+    width:100vw;
+    padding:10px;
+    color:black;
+}
+.ok{
+    border:1px dashed black;
+}
+.imgGrid{
+    height:200px;
+    overflow-y: hidden;
+    width:100%;
+}
+
+.gridItem{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

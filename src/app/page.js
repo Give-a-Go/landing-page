@@ -4,31 +4,18 @@ import { useEffect, useState } from "react";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import Bodi from "./madeComp/bodi";
 
 export default function Home() {
-
-  const [fontSize, setFontSize] = useState(40);
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const newFontSize = 40 + scrollY / 10;
-    setFontSize(newFontSize > 100 ? 100 : newFontSize)
-  };
 
   const particlesInit = async (main) => {
     await loadFull(main);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
-      <div style={{ position: "relative", height: "100vh" }}>
-        {/* Particle Background */}
-        <Particles
+    {/* Particles */}
+    <Particles
           id="tsparticles"
           init={particlesInit}
           options={{
@@ -38,27 +25,28 @@ export default function Home() {
               color: { value: "#000000" },
               links: { enable: true, color: "red", distance: 150 },
               move: { enable: true, speed: 2 },
-              number: { value: 10 },
-              size: { value: { min: 1, max: 10 } },
+              number: { value: 20 },
+              size: { value: { min: 0, max: 30 } },
             },
           }}
-          style={{ position: "absolute", top: 0, left: 0, zIndex: 0 }}
         />
+        {/* /particles */}
+      <div className="snapBody">
 
-        {/* Centered Content */}
-        <div
-          className="center-text"
-          style={{
-            position: "relative",
-            zIndex: 1,
-            color: "#fff",
-            fontSize: `${fontSize}px`, // Dynamically set font size based on scroll
-            textAlign: "center",
-            transition: "font-size 0.2s", // Smooth transition for resizing
-          }}
-        >
+        {/* 1 */}
+        <div className="center-text item">
           <h1>Give(a)Go</h1>
         </div>
+        {/* /1 */}
+
+        {/* 2 */}
+        <div
+          className="bodi item"
+        >
+          <Bodi />
+        </div>
+        {/* /2 */}
+
       </div>
     </>
   );

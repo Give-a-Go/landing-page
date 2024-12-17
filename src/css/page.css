@@ -3,7 +3,7 @@
 
 .center-text {
     position: fixed;
-    top: 50%;
+    top: 50vh;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Pixelify Sans', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,7 +15,32 @@
     white-space: nowrap;
     /* Add subtle animation */
     animation: float 6s ease-in-out infinite;
+    position: "relative";
+    z-index: 1;
+    color: "#fff";
+    font-size: "50px";
+    text-align: "center";
+    transition: "font-size 0.2s",
 }
+
+.bodi{
+    height:100vh;
+    width:100vw;
+    background-color: transparent;
+    backdrop-filter: invert(100%);
+    position: relative;
+    top:100vh;
+    z-index: 1;
+    border-top: 5px dashed black;
+}
+
+#particle{
+    position: "absolute";
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 
 @keyframes float {
     0%, 100% {
