@@ -30,8 +30,8 @@
     backdrop-filter: invert(100%);
     position: relative;
     top:100vh;
+    position: relative;
     z-index: 1;
-    border-top: 5px dashed black;
 }
 
 #particle{

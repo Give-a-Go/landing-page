@@ -5,6 +5,7 @@ import { Flex, Heading, Text } from "@chakra-ui/react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Bodi from "./madeComp/bodi";
+import Luma from "./madeComp/luma";
 
 export default function Home() {
 
@@ -20,7 +21,7 @@ export default function Home() {
           init={particlesInit}
           options={{
             background: { color: { value: "#808080" } },
-            fpsLimit: 60,
+            fpsLimit: 100,
             particles: {
               color: { value: "#000000" },
               links: { enable: true, color: "red", distance: 150 },
@@ -32,20 +33,14 @@ export default function Home() {
         />
         {/* /particles */}
       <div className="snapBody">
-
-        {/* 1 */}
+        
         <div className="center-text item">
           <h1>Give(a)Go</h1>
         </div>
-        {/* /1 */}
 
-        {/* 2 */}
-        <div
-          className="bodi item"
-        >
-          <Bodi />
-        </div>
-        {/* /2 */}
+        <div className="bodi item"> <Bodi /> </div>
+        <div className="luma item"> <Luma /> </div>
+        
 
       </div>
     </>

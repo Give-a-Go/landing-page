@@ -7,6 +7,8 @@ import "../../css/gridbodi.css"
 export default function Bodi(){
     return(
         <Provider>
+            <div className="bodii">
+            <h1>Our Projects</h1>
             <Grid
             templateColumns="repeat(auto-fit,200px)"
             gap={6}
@@ -16,8 +18,16 @@ export default function Bodi(){
                     "pexels-aleksandra-larry-77353944-29715252.jpg",
                     "pexels-anyela-malaga-341169564-29683927.jpg",
                     "pexels-holodna-29498917.jpg",
+                    "pexels-eugenia-sol-1769194548-29749744.jpg",
+                    
+                    "pexels-holodna-29498917.jpg",
                     "pexels-anyela-malaga-341169564-29683927.jpg",
                     "pexels-eugenia-sol-1769194548-29749744.jpg",
+                    
+                    "pexels-eugenia-sol-1769194548-29749744.jpg",
+                    "pexels-eugenia-sol-1769194548-29749744.jpg",
+                    "pexels-holodna-29498917.jpg",
+                    "pexels-holodna-29498917.jpg",
 
                 ].map((src,index) => (
                     <GridItem key={index} className="gridItem" style={{ border: "1px solid" }}>
@@ -26,6 +36,7 @@ export default function Bodi(){
                     </GridItem>
                 ))}
             </Grid>
+            </div>
         </Provider>
     )
 }
