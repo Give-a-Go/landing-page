@@ -6,6 +6,8 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Bodi from "./madeComp/bodi";
 import Luma from "./madeComp/luma";
+import Cp from "./madeComp/cp";
+import { Provider } from "@/components/ui/provider";
 
 export default function Home() {
 
@@ -14,35 +16,36 @@ export default function Home() {
   };
 
   return (
-    <>
+    <Provider>
     {/* Particles */}
     <Particles
           id="tsparticles"
           init={particlesInit}
           options={{
-            background: { color: { value: "#808080" } },
             fpsLimit: 100,
             particles: {
-              color: { value: "#000000" },
-              links: { enable: true, color: "red", distance: 150 },
+              color: { value: "#FF0000" },
+              links: { enable: true, color: "black", distance: 1000 },
               move: { enable: true, speed: 2 },
               number: { value: 20 },
               size: { value: { min: 0, max: 30 } },
             },
           }}
-        />
-        {/* /particles */}
-      <div className="snapBody">
-        
-        <div className="center-text item">
-          <h1>Give(a)Go</h1>
-        </div>
+    />
 
-        <div className="bodi item"> <Bodi /> </div>
-        <div className="luma item"> <Luma /> </div>
-        
+    {/* /particles */}
+
+      <div className="background">
+
+        <h1>Give(a)Go</h1>
 
       </div>
-    </>
+
+      <div className="dummy"></div>
+      
+      <Bodi />
+      <Luma />
+
+    </Provider>
   );
 }
