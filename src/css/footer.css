@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+.footer{
+    height:50vh;    
+    width:100vw;
+    position: relative;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    font-size: 40;
+    z-index: 1;
+    color:black;
+    gap:10px;
+    
+}
+.mod{
+    height:80%;
+    width:40px;
+    border:1px solid;
+    writing-mode: vertical-rl;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 10px;
+}

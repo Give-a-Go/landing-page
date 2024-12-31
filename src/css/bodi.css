@@ -2,9 +2,8 @@
     height:auto;
     width:100vw;
     background-color: transparent;
-    background: linear-gradient(darkblue, black);
     position: relative;
-    z-index: 0;
+    z-index: 1;
     gap:0;
 }
 
@@ -14,5 +13,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border:1px solid;
+    
 }

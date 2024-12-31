@@ -4,7 +4,7 @@ import { Provider } from "@/components/ui/provider";
 
 export default function Luma(){
     return(
-        <div className="luma">
+        <div className="luma snap-item">
 
             <iframe
                 className="lumaEvent"

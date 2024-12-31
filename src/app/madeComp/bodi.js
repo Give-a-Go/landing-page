@@ -14,7 +14,7 @@ function Card(){
 
 export default function Bodi(){
     return(
-        <div className="bodi">
+        <div className="bodi snap-item">
             <Grid templateColumns="repeat(6, 1fr)"
             
             justifyItems="center">
