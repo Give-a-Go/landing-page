@@ -10,7 +10,7 @@ export default function Luma(){
                 className="lumaEvent"
                 src="https://lu.ma/embed/event/evt-Y4HDJMBpUaF3jQJ/simple"
                 width="800"
-                height="450"
+                height="550"
                 frameBorder="0"
                 style={{border: "5px solid #bfcbda88", borderRadius: "20px"}}
                 allowFullScreen=""
