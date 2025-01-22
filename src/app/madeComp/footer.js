@@ -17,7 +17,7 @@ function Box(values){
     return(
     <>
     
-    <Card.Root overflow="hidden" padding="10px" backgroundColor="black" border="none">
+    <Card.Root overflow="hidden" padding="10px"marginRight="10px" backgroundColor="black" border="none" width="220px" minWidth="220px" maxWidth="220px">
         <Image
           src={values.link}
           alt={values.alt}

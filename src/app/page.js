@@ -33,11 +33,11 @@ export default function Home() {
           options={{
             fpsLimit: 100,
             particles: {
-              color: { value: "#FFFFFF" },
+              color: { value: "#FF0000" },
               links: { enable: true, color: "black", distance: 1 },
               move: { enable: true, speed: {min : 0, max :10  } },
               number: { value: 10 },
-              size: { value: { min: 0, max: 40 } },
+              size: { value: { min: 0, max: 90 } },
               shadow: true,
             
             },
@@ -46,14 +46,12 @@ export default function Home() {
 
     {/* /particles */}
 
-    
-
     <div className="snapContainer">
           
       <div className="dummy snap-item"><Hero /></div>
-      {/* <div className="snap-items"><Bodi /></div> */}
       <div className="snap-items"><Luma /></div>
       <div className="snap-items"><Footer /></div>
+      {/* <div className="snap-items"><Bodi /></div> */}
       {/* <div className="snap-items"><Loop /></div> */}
       {/* <div className="snap-items"><CommunityProjects /></div> */}
       
