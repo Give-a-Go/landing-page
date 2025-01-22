@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .center-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    pointer-events: none; /* Ensures text doesn't interfere with particle interactions */
+    white-space: nowrap;
+    /* Add subtle animation */
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, calc(-50% - 10px));
+    }
+  }

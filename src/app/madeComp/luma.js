@@ -9,9 +9,8 @@ export default function Luma(){
             <iframe
                 className="lumaEvent"
                 src="https://lu.ma/embed/event/evt-Y4HDJMBpUaF3jQJ/simple"
-                width="800"
-                height="550"
-                frameBorder="0"
+                width="700"
+                height="450"
                 style={{border: "5px solid #bfcbda88", borderRadius: "20px"}}
                 allowFullScreen=""
                 aria-hidden="false"

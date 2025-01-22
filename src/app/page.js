@@ -16,6 +16,7 @@ import { Provider } from "@/components/ui/provider";
 import Footer from "./madeComp/footer";
 import Loop from "./madeComp/loop";
 import CommunityProjects from "./madeComp/CommunityProjects";
+import Hero from "./madeComp/hero";
 
 export default function Home() {
 
@@ -49,12 +50,12 @@ export default function Home() {
 
     <div className="snapContainer">
           
-      <div className="dummy snap-item"></div>
-      <div className="snap-items"><Bodi /></div>
-      <div className="snap-items"><Footer /></div>
+      <div className="dummy snap-item"><Hero /></div>
+      {/* <div className="snap-items"><Bodi /></div> */}
       <div className="snap-items"><Luma /></div>
-      <div className="snap-items"><Loop /></div>
-      <div className="snap-items"><CommunityProjects /></div>
+      <div className="snap-items"><Footer /></div>
+      {/* <div className="snap-items"><Loop /></div> */}
+      {/* <div className="snap-items"><CommunityProjects /></div> */}
       
     </div>
 
