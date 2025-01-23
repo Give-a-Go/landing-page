@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+.footer{
+    height:370px;    
+    width:100vw;
+    position: relative;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    font-size: 40;
+    z-index: 1;
+    gap:10px;
+    display: flex;
+    backdrop-filter: blur(20px);
+    background-color:rgba(0, 0, 255, 0.335);
+    overflow-x: scroll;
+}
+.mod{
+    height:339px;
+    width:40px;
+    writing-mode: vertical-rl;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background-color: black;
+    color:white;
+    font-family: "Pixelify Sans";
+}
