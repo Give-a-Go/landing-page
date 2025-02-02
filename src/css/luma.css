@@ -1,5 +1,5 @@
 .luma{
-    height:100vh;
+    height:auto;
     width:100vw;
     background-color: transparent;
     z-index: 1;
@@ -7,10 +7,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 .lumaEvent {
     display: block;
-    width: 100%; /* Full container width */
-    height: 100%; /* Adjust height as needed */
+    width: 100vw; /* Full container width */
+    height: 100vh; /* Adjust height as needed */
     border: none; /* Removes default border */
     overflow: hidden; /* Prevents internal scrolling */}
+
+iframe{
+    overflow-y: hidden;
+}
