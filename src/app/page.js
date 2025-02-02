@@ -13,6 +13,7 @@ import CommunityProjects from "./madeComp/CommunityProjects";
 import Hero from "./madeComp/hero";
 import HeroSection from "@/components/landing/HeroSection";
 import AboutSection from "@/components/landing/AboutSection";
+import Navbar from "@/components/navbar/nav";
 
 export default function Home() {
   const particlesInit = async (main) => {
@@ -32,6 +33,7 @@ export default function Home() {
 
   return (
     <Flex bg="#141414" minH="100vh">
+      <Navbar></Navbar>
       Hello word
       <HeroSection />
       <AboutSection />
