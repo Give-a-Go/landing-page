@@ -1,22 +1,49 @@
 // particleAnimation.js
 export class Particle {
-  constructor(canvas, x, y) {
+  constructor(canvas) {
     this.position = {
-      x: x || Math.random() * canvas.width,
-      y: y || Math.random() * canvas.height,
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
     };
     this.velocity = {
-      x: Math.random() * 1 - 0.5,
-      y: Math.random() * 1 - 0.5,
+      x: Math.random() * 0.2 - 0.1,
+      y: Math.random() * 0.2 - 0.1,
     };
     this.size = Math.random() * 2 + 2;
     this.canvas = canvas;
   }
 
   update() {
-    // Minimal position update
+    // Get center point and calculate distance
+    const centerX = this.canvas.width / 2;
+    const centerY = this.canvas.height / 2;
+    const dx = this.position.x - centerX;
+    const dy = this.position.y - centerY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // Define repulsion zone (adjust these values to change the effect)
+    const repulsionRadius = 150; // Size of repulsion zone
+    const repulsionStrength = 0.3; // Strength of repulsion
+
+    // Apply repulsion if particle is within the zone
+    if (distance < repulsionRadius) {
+      // Calculate repulsion direction (normalized vector from center)
+      const angle = Math.atan2(dy, dx);
+      const repulsionX = Math.cos(angle) * repulsionStrength;
+      const repulsionY = Math.sin(angle) * repulsionStrength;
+
+      // Add repulsion to velocity
+      this.velocity.x += repulsionX * (1 - distance / repulsionRadius);
+      this.velocity.y += repulsionY * (1 - distance / repulsionRadius);
+    }
+
+    // Update position
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
+
+    // Apply slight friction to prevent excessive speeds
+    this.velocity.x *= 0.99;
+    this.velocity.y *= 0.99;
 
     // Wrap around edges
     if (this.position.x > this.canvas.width) this.position.x = 0;
@@ -61,4 +88,3 @@ export function drawParticles(ctx, particles) {
     });
   });
 }
-    
