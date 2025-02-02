@@ -1,11 +1,7 @@
-import "../../css/CommunityProjects.css"
-
-export default function CommunityProjects(){
-    return(
+export default function CommunityProjects() {
+  return (
     <>
-        <div className="CommunityProjects">
-            
-        </div>
+      <div className="CommunityProjects"></div>
     </>
-    )
+  );
 }
