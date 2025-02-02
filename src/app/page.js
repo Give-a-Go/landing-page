@@ -3,6 +3,7 @@ import { Flex } from "@chakra-ui/react";
 import { loadFull } from "tsparticles";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import AboutSection from "@/components/landing/AboutSection";
+import Navbar from "@/components/navbar/nav";
 
 export default function Home() {
   const particlesInit = async (main) => {
@@ -22,6 +23,7 @@ export default function Home() {
 
   return (
     <Flex bg="#141414" minH="100vh" flexDirection="column" align="center">
+      <Navbar />
       Hello world
       <HeroSection />
       <AboutSection />
