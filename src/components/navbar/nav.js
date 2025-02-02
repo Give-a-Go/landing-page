@@ -4,7 +4,7 @@ import { Button, Flex } from "@chakra-ui/react";
 const buttonStyles = {
     background: 'green',
     padding: '5px',
-    borderRadius: '5px',
+    borderRadius: '10px',
     bg: 'transparent',
     color: 'white',
     _hover: {color:'black', bg:'white'}
@@ -40,7 +40,7 @@ export default function Navbar(){
     <Flex
         {...boxStyles}
         >
-            
+
             <div className="logo">
                 LOGO
             </div>
