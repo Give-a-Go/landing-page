@@ -1,5 +1,4 @@
-import { Button, Flex } from "@chakra-ui/react";
-
+import { Button, Flex } from "@chakra-ui/react";import { useEffect } from "react"; 
 
 const buttonStyles = {
     background: 'green',
@@ -29,10 +28,18 @@ const boxStyles = {
     alignItems: 'center',
     backdropFilter: 'blur(10px)',
     background: 'rgb(0,0,0,0.2)',
-  };
+};
 
 
 export default function Navbar(){
+
+    useEffect(()=>{
+        const link = document.createElement('link');
+        link.href = "https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap";
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    },[]);
+    
     return <Flex
     {...NavbarStyle}
     >
@@ -41,10 +48,11 @@ export default function Navbar(){
         {...boxStyles}
         >
 
-            <div className="logo">
-                LOGO
+            <div style={{fontFamily:'Pixelify Sans', fontSize:'1.5rem'}}>
+                G(o)G
             </div>
-            <Flex className="links"
+
+            <Flex
             justifyContent="space-between"
             gap="20px"
             >
