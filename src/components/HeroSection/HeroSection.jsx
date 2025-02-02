@@ -47,10 +47,14 @@ function HeroSection() {
     <div className="hero-container">
       <canvas ref={canvasRef} className="hero-canvas" />
       <div className="hero-content">
-        <Flex direction="column" align="center">
-        <h1 className="hero-title" style={{ fontSize: '6rem' }}>Give(a)Go</h1>
-        <p style={{ fontSize: '' }}>We build cool sh*t</p>
-        </Flex>
+        <div className="hero-text">
+          <h1 className="hero-title">Give(a)Go</h1>
+          <p className="hero-subtitle">We build cool sh*t</p>
+          <div className="hero-buttons">
+            <button className="hero-button primary">Join next event</button>
+            <button className="hero-button secondary">Join community</button>
+          </div>
+        </div>
       </div>
     </div>
   );
