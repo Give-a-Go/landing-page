@@ -22,14 +22,9 @@ export default function Home() {
   // Footer
 
   return (
-<<<<<<< HEAD
-    <Flex bg="#141414" minH="100vh">
-      <Navbar></Navbar>
-      Hello word
-=======
     <Flex bg="#141414" minH="100vh" flexDirection="column" align="center">
+      <Navbar />
       Hello world
->>>>>>> 282d67e36c5a822c725c312a1c77751649893930
       <HeroSection />
       <AboutSection />
       {/* <Particles
