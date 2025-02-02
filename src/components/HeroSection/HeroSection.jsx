@@ -4,7 +4,7 @@
 import React, { useEffect, useRef } from "react";
 import { Particle, drawParticles } from "./particleAnimation";
 import "./HeroSection.css";
-import { Flex } from "@chakra-ui/react";
+import { Button, Flex, Heading, Text, useBreakpointValue } from "@chakra-ui/react";
 
 function HeroSection() {
   const canvasRef = useRef(null);
