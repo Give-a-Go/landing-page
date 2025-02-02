@@ -1,28 +1,46 @@
-import { Flex } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
+
+
+const buttonStyles = {
+    background: 'green',
+    padding: '5px',
+    borderRadius: '5px',
+    bg: 'transparent',
+    color: 'white',
+    _hover: {color:'black', bg:'white'}
+    
+};
+
+const NavbarStyle ={
+    width: '100vw',
+    justifyContent: 'center',
+    position: 'absolute',
+    zIndex: 11,
+    paddingTop: '20px',
+}
+
+const boxStyles = {
+    width: '80%',
+    padding: '20px',
+    height: '50px',
+    color: 'white',
+    justifyContent: 'space-between',
+    borderRadius: '20px',
+    alignItems: 'center',
+    backdropFilter: 'blur(10px)',
+    background: 'rgb(0,0,0,0.2)',
+  };
+
 
 export default function Navbar(){
-    return <>
-    <Flex
-    width="100vw"
-    justifyContent="center"
-    position="absolute"
-    zIndex="1"
-    paddingTop="20px"
-    
+    return <Flex
+    {...NavbarStyle}
     >
 
     <Flex
-        width = "80%"
-        padding="20px"
-        height="50px"
-        color="white"
-        justifyContent="space-between"
-        borderRadius="20px"
-        alignItems="center"
-        // border="1px solid white"
-        backdropFilter="blur(10px)"
-        background="rgb(0,0,0,0.2)"
+        {...boxStyles}
         >
+            
             <div className="logo">
                 LOGO
             </div>
@@ -30,36 +48,27 @@ export default function Navbar(){
             justifyContent="space-between"
             gap="20px"
             >
-                <Flex
-                // border="1px solid"
-                // background="green"
-                padding="5px"
-                borderRadius="5px"
+                <Button
+                {...buttonStyles}
                 >
                     Sign Up
-                </Flex>
-                <Flex
-                // border="1px solid"
-                // background="red"
-                padding="5px"
-                borderRadius="5px"
+                </Button>
+
+                <Button
+                {...buttonStyles}
                 >
                     Log In
-                </Flex>
+                </Button>
 
-                <Flex
-                // border="1px solid"
-                // background="red"
-                padding="5px"
-                borderRadius="5px"
+                <Button
+                {...buttonStyles}
                 >
                     Blog
-                </Flex>
+                </Button>
+
             </Flex>
 
         </Flex>
 
     </Flex>
-        
-    </>
 }
