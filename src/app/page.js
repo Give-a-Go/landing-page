@@ -1,7 +1,7 @@
 "use client";
 import { Flex } from "@chakra-ui/react";
 import { loadFull } from "tsparticles";
-import HeroSection from "@/components/landing/HeroSection";
+import HeroSection from "@/components/HeroSection/HeroSection";
 import AboutSection from "@/components/landing/AboutSection";
 
 export default function Home() {
