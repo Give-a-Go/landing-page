@@ -24,7 +24,6 @@ export default function Home() {
   return (
     <Flex bg="#141414" minH="100vh" flexDirection="column" align="center">
       <Navbar />
-      Hello world
       <HeroSection />
       <AboutSection />
       {/* <Particles

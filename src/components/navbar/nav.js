@@ -5,7 +5,11 @@ export default function Navbar(){
     <Flex
     width="100vw"
     justifyContent="center"
-    paddingTop="20px">
+    position="absolute"
+    zIndex="1"
+    paddingTop="20px"
+    
+    >
 
     <Flex
         width = "80%"
@@ -15,7 +19,9 @@ export default function Navbar(){
         justifyContent="space-between"
         borderRadius="20px"
         alignItems="center"
-        border="1px solid white"
+        // border="1px solid white"
+        backdropFilter="blur(10px)"
+        background="rgb(0,0,0,0.2)"
         >
             <div className="logo">
                 LOGO
@@ -25,7 +31,7 @@ export default function Navbar(){
             gap="20px"
             >
                 <Flex
-                border="1px solid"
+                // border="1px solid"
                 // background="green"
                 padding="5px"
                 borderRadius="5px"
@@ -33,7 +39,7 @@ export default function Navbar(){
                     Sign Up
                 </Flex>
                 <Flex
-                border="1px solid"
+                // border="1px solid"
                 // background="red"
                 padding="5px"
                 borderRadius="5px"
@@ -42,7 +48,7 @@ export default function Navbar(){
                 </Flex>
 
                 <Flex
-                border="1px solid"
+                // border="1px solid"
                 // background="red"
                 padding="5px"
                 borderRadius="5px"
