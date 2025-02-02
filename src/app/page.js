@@ -1,16 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { Flex, Heading, Text, Spinner } from "@chakra-ui/react";
-import Particles from "react-tsparticles";
+import { Flex } from "@chakra-ui/react";
 import { loadFull } from "tsparticles";
-import Bodi from "./madeComp/bodi";
-import Luma from "./madeComp/luma";
-import Cp from "./madeComp/CommunityProjects";
-import { Provider } from "@/components/ui/provider";
-import Footer from "./madeComp/footer";
-import Loop from "./madeComp/loop";
-import CommunityProjects from "./madeComp/CommunityProjects";
-import Hero from "./madeComp/hero";
 import HeroSection from "@/components/landing/HeroSection";
 import AboutSection from "@/components/landing/AboutSection";
 import Navbar from "@/components/navbar/nav";
@@ -32,9 +22,14 @@ export default function Home() {
   // Footer
 
   return (
+<<<<<<< HEAD
     <Flex bg="#141414" minH="100vh">
       <Navbar></Navbar>
       Hello word
+=======
+    <Flex bg="#141414" minH="100vh" flexDirection="column" align="center">
+      Hello world
+>>>>>>> 282d67e36c5a822c725c312a1c77751649893930
       <HeroSection />
       <AboutSection />
       {/* <Particles
