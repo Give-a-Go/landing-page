@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/navbar/nav";
 import { Radio, RadioGroup } from "@/components/ui/radio";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Flex,
   Box,
@@ -17,7 +18,10 @@ export default function SignUpPage() {
   const [formData, setFormData] = useState({
     name: "",
     background: "",
-    notificationPreference: "email",
+    notificationPreferences: {
+      email: false,
+      whatsapp: false,
+    },
     email: "",
     whatsapp: "",
   });
@@ -35,6 +39,16 @@ export default function SignUpPage() {
     }));
   };
 
+  const handlePreferenceChange = (type) => {
+    setFormData((prev) => ({
+      ...prev,
+      notificationPreferences: {
+        ...prev.notificationPreferences,
+        [type]: !prev.notificationPreferences[type],
+      },
+    }));
+  };
+
   return (
     <Flex w="100%" direction="column">
       <Navbar />
@@ -48,7 +62,7 @@ export default function SignUpPage() {
         <Box bg="white" p={8} rounded="lg" shadow="xl" w="full" maxW="md">
           <VStack spacing={6} as="form" onSubmit={handleSubmit}>
             <Text fontSize="2xl" fontWeight="bold" color="#4B0082">
-              Join Give(a)Go
+              Sign Up
             </Text>
 
             <VStack w="full" align="flex-start" spacing={2}>
@@ -59,6 +73,7 @@ export default function SignUpPage() {
                 name="name"
                 required
                 value={formData.name}
+                color="#4B0082"
                 onChange={handleChange}
               />
             </VStack>
@@ -72,6 +87,7 @@ export default function SignUpPage() {
                 required
                 value={formData.background}
                 onChange={handleChange}
+                color="#4B0082"
                 placeholder="I'm a student/developer/designer who loves building..."
               />
             </VStack>
@@ -80,27 +96,25 @@ export default function SignUpPage() {
               <Text color="#4B0082" fontWeight="medium">
                 How would you like to receive updates? *
               </Text>
-              <RadioGroup
-                value={formData.notificationPreference}
-                onChange={(value) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    notificationPreference: value,
-                  }))
-                }
-              >
-                <VStack align="start" spacing={2}>
-                  <Radio value="email" colorScheme="purple">
-                    Email
-                  </Radio>
-                  <Radio value="whatsapp" colorScheme="purple">
-                    WhatsApp
-                  </Radio>
-                </VStack>
-              </RadioGroup>
+              <VStack align="start" spacing={2}>
+                <Checkbox
+                  checked={formData.notificationPreferences.email}
+                  onCheckedChange={() => handlePreferenceChange("email")}
+                  color="#4B0082"
+                >
+                  Email
+                </Checkbox>
+                <Checkbox
+                  checked={formData.notificationPreferences.whatsapp}
+                  onCheckedChange={() => handlePreferenceChange("whatsapp")}
+                  color="#4B0082"
+                >
+                  WhatsApp
+                </Checkbox>
+              </VStack>
             </VStack>
 
-            {formData.notificationPreference === "email" && (
+            {formData.notificationPreferences.email && (
               <VStack w="full" align="flex-start" spacing={2}>
                 <Text color="#4B0082" fontWeight="medium">
                   Email Address *
@@ -108,15 +122,16 @@ export default function SignUpPage() {
                 <Input
                   name="email"
                   type="email"
-                  required
+                  required={formData.notificationPreferences.email}
                   value={formData.email}
                   onChange={handleChange}
-                  // focusBorderColor="#4B0082"
+                  placeholder="example@domain.com"
+                  color="#4B0082"
                 />
               </VStack>
             )}
 
-            {formData.notificationPreference === "whatsapp" && (
+            {formData.notificationPreferences.whatsapp && (
               <VStack w="full" align="flex-start" spacing={2}>
                 <Text color="#4B0082" fontWeight="medium">
                   WhatsApp Number *
@@ -124,15 +139,17 @@ export default function SignUpPage() {
                 <Input
                   name="whatsapp"
                   type="tel"
-                  required
+                  required={formData.notificationPreferences.whatsapp}
                   value={formData.whatsapp}
                   onChange={handleChange}
-                  // focusBorderColor="#4B0082"
+                  placeholder="+353 123 456 789"
+                  color="#4B0082"
                 />
               </VStack>
             )}
 
             <Button
+              mt="6"
               type="submit"
               bg="#4B0082"
               color="white"

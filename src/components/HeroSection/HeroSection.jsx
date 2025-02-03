@@ -4,7 +4,13 @@
 import React, { useEffect, useRef } from "react";
 import { Particle, drawParticles } from "./particleAnimation";
 import "./HeroSection.css";
-import { Button, Flex, Heading, Text, useBreakpointValue } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
 function HeroSection() {
   const canvasRef = useRef(null);
@@ -13,10 +19,10 @@ function HeroSection() {
 
   // Responsive font sizes using Chakra's useBreakpointValue
   const titleSize = useBreakpointValue({
-    base: "3rem",    // Mobile
-    sm: "4rem",      // Small tablets
-    md: "5rem",      // Tablets
-    lg: "6rem",      // Desktop
+    base: "3rem", // Mobile
+    sm: "4rem", // Small tablets
+    md: "5rem", // Tablets
+    lg: "6rem", // Desktop
   });
 
   const subtitleSize = useBreakpointValue({
@@ -67,16 +73,17 @@ function HeroSection() {
       width="100%"
       height="100vh"
       bg="rgb(75, 0, 130)"
-      overflow="hidden"
+      overflowX="hidden"
     >
       <canvas
         ref={canvasRef}
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100%'
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
         }}
       />
       <Flex
@@ -87,11 +94,7 @@ function HeroSection() {
         alignItems="center"
         justifyContent="center"
       >
-        <Flex
-          direction="column"
-          align="center"
-          px={{ base: 4, md: 8 }}
-        >
+        <Flex direction="column" align="center" px={{ base: 4, md: 8 }}>
           <Heading
             fontFamily="'IBM Plex Serif', serif"
             fontSize={titleSize}
@@ -104,7 +107,7 @@ function HeroSection() {
           >
             Give(a)Go
           </Heading>
-          
+
           <Text
             fontSize={subtitleSize}
             color="rgba(255, 255, 255, 0.9)"
@@ -113,7 +116,7 @@ function HeroSection() {
           >
             We build cool sh*t
           </Text>
-          
+
           <Flex
             gap={{ base: 3, md: 4 }}
             flexDirection={{ base: "column", sm: "row" }}
@@ -126,7 +129,7 @@ function HeroSection() {
               color="rgb(75, 0, 130)"
               _hover={{
                 transform: "translateY(-2px)",
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)"
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
               }}
               transition="all 0.2s ease"
               width={{ base: "100%", sm: "auto" }}
@@ -141,7 +144,7 @@ function HeroSection() {
               borderColor="white"
               _hover={{
                 transform: "translateY(-2px)",
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)"
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
               }}
               transition="all 0.2s ease"
               width={{ base: "100%", sm: "auto" }}
@@ -154,8 +157,13 @@ function HeroSection() {
 
       <style jsx global>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
         }
       `}</style>
     </Flex>

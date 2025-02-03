@@ -10,7 +10,7 @@ const buttonStyles = {
   borderRadius: "10px",
   bg: "transparent",
   color: "white",
-  _hover: { color: "black", bg: "white" },
+  _hover: { opacity: 0.7 },
 };
 
 const NavbarStyle = {
@@ -56,9 +56,9 @@ export default function Navbar() {
             <Button {...buttonStyles}>Sign Up</Button>
           </Link>
 
-          <Button {...buttonStyles}>Log In</Button>
-
-          <Button {...buttonStyles}>Blog</Button>
+          <Link href="https://giveago.substack.com/" target="_blank">
+            <Button {...buttonStyles}>Blog</Button>
+          </Link>
         </Flex>
       </Flex>
     </Flex>
