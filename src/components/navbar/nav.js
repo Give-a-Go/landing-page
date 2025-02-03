@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { useEffect } from "react";
 
 const buttonStyles = {
@@ -44,12 +45,16 @@ export default function Navbar() {
   return (
     <Flex {...NavbarStyle}>
       <Flex {...boxStyles}>
-        <div style={{ fontFamily: "Pixelify Sans", fontSize: "1.5rem" }}>
-          Give(a)Go
-        </div>
+        <Link href="/">
+          <Text fontFamily="Pixelify Sans" fontSize="1.5rem">
+            Give(a)Go
+          </Text>
+        </Link>
 
         <Flex justifyContent="space-between" gap="20px">
-          <Button {...buttonStyles}>Sign Up</Button>
+          <Link href="/signup">
+            <Button {...buttonStyles}>Sign Up</Button>
+          </Link>
 
           <Button {...buttonStyles}>Log In</Button>
 
