@@ -3,9 +3,23 @@ import React from "react";
 
 function AboutSection() {
   return (
-    <Flex minH="50vh" flexDir="column" overflow="hidden" align="center">
-      <Text my="20">We are cool</Text>
-      <Image maxW="100vw" src="./assets/images/community_bg.png" />
+    <Flex
+      minH="100vh"
+      w="100%"
+      flexDir="column"
+      overflow="hidden"
+      align="center"
+      bg="linear-gradient(180deg, #4B007D 0%, rgba(36,32,42,1) 40%, #141414 100%);"
+    >
+      <Text my="20" h="200px">
+        We are cool
+      </Text>
+      <Image
+        mt="100px"
+        maxW="70vw"
+        src="./assets/images/community_bg.png"
+        transform="scale(1.5)"
+      />
     </Flex>
   );
 }

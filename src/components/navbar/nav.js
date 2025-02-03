@@ -14,7 +14,7 @@ const buttonStyles = {
 };
 
 const NavbarStyle = {
-  width: "100vw",
+  width: "100%",
   justifyContent: "center",
   position: "absolute",
   zIndex: 11,

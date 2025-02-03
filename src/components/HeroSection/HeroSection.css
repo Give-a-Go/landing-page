@@ -2,7 +2,7 @@ HeroSection.css .hero-container {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: rgb(75, 0, 130);
+  background-color: #642f97;
   overflow: hidden;
 }
 
@@ -72,7 +72,7 @@ HeroSection.css .hero-container {
 
 .hero-button.primary {
   background-color: white;
-  color: rgb(75, 0, 130);
+  color: rgb(0, 0, 0);
 }
 
 .hero-button.secondary {
