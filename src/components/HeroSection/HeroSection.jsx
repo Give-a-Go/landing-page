@@ -11,6 +11,7 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 function HeroSection() {
   const canvasRef = useRef(null);
@@ -134,23 +135,25 @@ function HeroSection() {
               transition="all 0.2s ease"
               width={{ base: "100%", sm: "auto" }}
             >
-              Join next event
+              Attend next event ↗
             </Button>
-            <Button
-              size={{ base: "md", md: "lg" }}
-              borderRadius="full"
-              variant="outline"
-              color="white"
-              borderColor="white"
-              _hover={{
-                transform: "translateY(-2px)",
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
-              }}
-              transition="all 0.2s ease"
-              width={{ base: "100%", sm: "auto" }}
-            >
-              Join community
-            </Button>
+            <Link href="/signup">
+              <Button
+                size={{ base: "md", md: "lg" }}
+                borderRadius="full"
+                variant="outline"
+                color="white"
+                borderColor="white"
+                _hover={{
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                }}
+                transition="all 0.2s ease"
+                width={{ base: "100%", sm: "auto" }}
+              >
+                Join community 🚀
+              </Button>
+            </Link>
           </Flex>
         </Flex>
       </Flex>
