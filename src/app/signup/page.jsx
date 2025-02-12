@@ -213,7 +213,7 @@ export default function SignUpPage() {
                     <VStack align="start" spacing={2}>
                       {/* Email Notifications */}
                       <Checkbox
-                        isChecked={formData.email_notifications}
+                        // isChecked={formData.email_notifications}
                         onChange={() =>
                           handleCheckboxChange("email_notifications")
                         }
@@ -224,7 +224,7 @@ export default function SignUpPage() {
                       </Checkbox>
                       {/* WhatsApp Notifications */}
                       <Checkbox
-                        isChecked={formData.whatsapp_notifications}
+                        // isChecked={formData.whatsapp_notifications}
                         onChange={() =>
                           handleCheckboxChange("whatsapp_notifications")
                         }
